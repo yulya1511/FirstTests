@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c681f9f1-f5f0-4058-bf5a-2f4bb648ffcd" name="Default Changelist" comment="FirstCase" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2a307crCkf99yAcF6eceArijQn6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SteamTests.sortOfTitles">
+    <configuration name="StaemTests.checkPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="firstTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="firstTests" />
+      <option name="MAIN_CLASS_NAME" value="firstTests.StaemTests" />
+      <option name="METHOD_NAME" value="checkPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaemTests.searchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="firstTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="firstTests" />
+      <option name="MAIN_CLASS_NAME" value="firstTests.StaemTests" />
+      <option name="METHOD_NAME" value="searchTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SteamTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="firstTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="firstTests" />
+      <option name="MAIN_CLASS_NAME" value="firstTests.SteamTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SteamTests.searchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="firstTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="firstTests" />
+      <option name="MAIN_CLASS_NAME" value="firstTests.SteamTests" />
+      <option name="METHOD_NAME" value="searchTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SteamTests.sortOfTitles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="firstTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="firstTests" />
+      <option name="MAIN_CLASS_NAME" value="firstTests.SteamTests" />
+      <option name="METHOD_NAME" value="sortOfTitles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" editBeforeRun="true">
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SteamTests.sortOfTitles" />
+        <item itemvalue="JUnit.SteamTests.searchTest" />
+        <item itemvalue="JUnit.SteamTests" />
+        <item itemvalue="JUnit.StaemTests.checkPage" />
+        <item itemvalue="JUnit.StaemTests.searchTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c681f9f1-f5f0-4058-bf5a-2f4bb648ffcd" name="Default Changelist" comment="" />
+      <created>1703531788966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703531788966</updated>
+    </task>
+    <task id="LOCAL-00001" summary="FirstCase">
+      <created>1703619096099</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703619096099</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="FirstCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="FirstCase" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="240" y="114" key="#Notifications" timestamp="1703847434214">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="240" y="114" key="#Notifications/0.23.1440.836@0.23.1440.836" timestamp="1703847434214" />
+    <state x="296" y="124" key="#Project_Structure" timestamp="1703532640485">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="296" y="124" key="#Project_Structure/0.23.1440.839@0.23.1440.839" timestamp="1703532640485" />
+    <state x="540" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1703540609783">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="540" y="203" key="#com.intellij.ide.util.MemberChooser/0.23.1440.838@0.23.1440.838" timestamp="1703540609783" />
+    <state x="200" y="52" key="CommitChangelistDialog2" timestamp="1703621316106">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="200" y="52" key="CommitChangelistDialog2/0.23.1440.839@0.23.1440.839" timestamp="1703621316106" />
+    <state width="929" height="178" key="GridCell.Tab.0.bottom" timestamp="1704633617244">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1398" height="355" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1703541538359" />
+    <state width="929" height="178" key="GridCell.Tab.0.bottom/0.23.1440.836@0.23.1440.836" timestamp="1704633617244" />
+    <state width="929" height="252" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1703542039565" />
+    <state width="929" height="234" key="GridCell.Tab.0.bottom/0.23.1440.839@0.23.1440.839" timestamp="1703618917253" />
+    <state width="929" height="234" key="GridCell.Tab.0.bottom/0.23.1440.840@0.23.1440.840" timestamp="1703621743922" />
+    <state width="929" height="178" key="GridCell.Tab.0.center" timestamp="1704633617243">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1398" height="355" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1703541538357" />
+    <state width="929" height="178" key="GridCell.Tab.0.center/0.23.1440.836@0.23.1440.836" timestamp="1704633617243" />
+    <state width="929" height="252" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1703542039563" />
+    <state width="929" height="234" key="GridCell.Tab.0.center/0.23.1440.839@0.23.1440.839" timestamp="1703618917251" />
+    <state width="929" height="234" key="GridCell.Tab.0.center/0.23.1440.840@0.23.1440.840" timestamp="1703621743919" />
+    <state width="929" height="178" key="GridCell.Tab.0.left" timestamp="1704633617242">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1398" height="355" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1703541538356" />
+    <state width="929" height="178" key="GridCell.Tab.0.left/0.23.1440.836@0.23.1440.836" timestamp="1704633617242" />
+    <state width="929" height="252" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1703542039562" />
+    <state width="929" height="234" key="GridCell.Tab.0.left/0.23.1440.839@0.23.1440.839" timestamp="1703618917249" />
+    <state width="929" height="234" key="GridCell.Tab.0.left/0.23.1440.840@0.23.1440.840" timestamp="1703621743918" />
+    <state width="929" height="178" key="GridCell.Tab.0.right" timestamp="1704633617243">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1398" height="355" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1703541538358" />
+    <state width="929" height="178" key="GridCell.Tab.0.right/0.23.1440.836@0.23.1440.836" timestamp="1704633617243" />
+    <state width="929" height="252" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1703542039564" />
+    <state width="929" height="234" key="GridCell.Tab.0.right/0.23.1440.839@0.23.1440.839" timestamp="1703618917252" />
+    <state width="929" height="234" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1703621743920" />
+    <state width="929" height="178" key="GridCell.Tab.1.bottom" timestamp="1704633617246">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="929" height="178" key="GridCell.Tab.1.bottom/0.23.1440.836@0.23.1440.836" timestamp="1704633617246" />
+    <state width="929" height="178" key="GridCell.Tab.1.bottom/0.23.1440.839@0.23.1440.839" timestamp="1703617822080" />
+    <state width="929" height="178" key="GridCell.Tab.1.center" timestamp="1704633617245">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="929" height="178" key="GridCell.Tab.1.center/0.23.1440.836@0.23.1440.836" timestamp="1704633617245" />
+    <state width="929" height="178" key="GridCell.Tab.1.center/0.23.1440.839@0.23.1440.839" timestamp="1703617822079" />
+    <state width="929" height="178" key="GridCell.Tab.1.left" timestamp="1704633617245">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="929" height="178" key="GridCell.Tab.1.left/0.23.1440.836@0.23.1440.836" timestamp="1704633617245" />
+    <state width="929" height="178" key="GridCell.Tab.1.left/0.23.1440.839@0.23.1440.839" timestamp="1703617822077" />
+    <state width="929" height="178" key="GridCell.Tab.1.right" timestamp="1704633617245">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="929" height="178" key="GridCell.Tab.1.right/0.23.1440.836@0.23.1440.836" timestamp="1704633617245" />
+    <state width="929" height="178" key="GridCell.Tab.1.right/0.23.1440.839@0.23.1440.839" timestamp="1703617822079" />
+    <state x="196" y="148" key="NewModule_or_Project.wizard" timestamp="1703621231591">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="196" y="148" key="NewModule_or_Project.wizard/0.23.1440.839@0.23.1440.839" timestamp="1703621231591" />
+    <state x="246" y="23" key="SettingsEditor" timestamp="1704633840381">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="246" y="23" key="SettingsEditor/0.23.1440.836@0.23.1440.836" timestamp="1704633840381" />
+    <state x="76" y="86" key="SettingsEditor/0.23.1440.839@0.23.1440.839" timestamp="1703620327616" />
+    <state x="76" y="26" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1703622088755" />
+    <state x="212" y="144" key="Vcs.Push.Dialog.v2" timestamp="1703619684403">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="212" y="144" key="Vcs.Push.Dialog.v2/0.23.1440.839@0.23.1440.839" timestamp="1703619684403" />
+    <state x="104" y="173" key="new project wizard" timestamp="1704461021565">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="104" y="173" key="new project wizard/0.23.1440.836@0.23.1440.836" timestamp="1704461021565" />
+    <state x="104" y="174" key="new project wizard/0.23.1440.839@0.23.1440.839" timestamp="1703532167979" />
+  </component>
+</project>
