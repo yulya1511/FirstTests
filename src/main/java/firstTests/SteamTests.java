@@ -1,21 +1,19 @@
 package firstTests;
 
+import static core.utils.WaitUtils.waitUntilPresenceOfElementLocated;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import core.utils.WaitUtils;
 import java.util.List;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.MainPage;
 
 public class SteamTests extends BaseTest {
 
-    @Before
-    public void init() {
-        driver.get("https://store.steampowered.com/");
-    }
+    private static final String FALLOUT = "Fallout";
 
     @Test
     public void searchTest() {
@@ -57,23 +55,38 @@ public class SteamTests extends BaseTest {
     //    - Все тайтлы расположены по убыванию цены.
     @Test
     public void sortOfTitles() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='store_nav_search_term']")))
-            .sendKeys("Fallout", Keys.ENTER);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='store_nav_search_term']")))
+//            .sendKeys("Fallout", Keys.ENTER);
+//
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='sort_by_trigger']")))
+//            .click();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(), 'убыванию цены')]")))
+//            .click();
+//
+//        List<WebElement> elementsSort =
+//            wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@id='search_results']")));
+//
+//        for (double i = 0; i < elementsSort.size(); i++) {
+//            if (i > elementsSort.size() - 1) {
+//                System.out.println("Цены расположены по убыванию");
+//            } else {
+//                System.out.println("Тест не пройден. Цифры расположены вразброс");
+//            }
+//        }
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='sort_by_trigger']")))
-            .click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(), 'убыванию цены')]")))
-            .click();
+        new MainPage()
+            .search(FALLOUT)
+            .sortByReducePrice();
+
+        WaitUtils.getExplicitWait().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("(//*[contains(text(),'убыванию цены')])[1]")));
 
         List<WebElement> elementsSort =
-            wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@id='search_results']")));
+            WaitUtils.getExplicitWait().until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+                By.xpath("//*[contains(@class,'discount_block')]")));
 
-        for (double i = 0; i < elementsSort.size(); i++) {
-            if (i > elementsSort.size() - 1) {
-                System.out.println("Цены расположены по убыванию");
-            } else {
-                System.out.println("Тест не пройден. Цифры расположены вразброс");
-            }
+        for (int i = 0; i < elementsSort.size(); i++) {
+            System.out.println(elementsSort.get(i).getAttribute("data-price-final"));
         }
     }
 }
