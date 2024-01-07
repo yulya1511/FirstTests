@@ -1,6 +1,8 @@
 package core.driver;
 
+import core.utils.WaitUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.ArrayList;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,5 +22,6 @@ public class DriverManager {
     public static void closeDriver() {
         driver.close();
         driver.quit();
+        driver = null;
     }
 }
