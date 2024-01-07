@@ -10,7 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SteamTests extends BaseDriverPage {
+public class SteamTests extends BaseTest {
 
     @Before
     public void init() {

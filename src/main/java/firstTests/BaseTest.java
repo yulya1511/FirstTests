@@ -1,5 +1,7 @@
 package firstTests;
 
+import core.driver.DriverManager;
+import core.utils.WaitUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 import org.junit.After;
@@ -8,22 +10,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-abstract public class BaseDriverPage {
+abstract public class BaseTest {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
 
     @Before
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = DriverManager.getDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = WaitUtils.getExplicitWait();
     }
 
     @After
     public void tearDown() {
-        driver.close();
-        driver.quit();
+        DriverManager.closeDriver();
     }
 }
