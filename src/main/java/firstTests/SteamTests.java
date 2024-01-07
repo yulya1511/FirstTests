@@ -1,10 +1,11 @@
 package firstTests;
 
-import static core.utils.WaitUtils.waitUntilPresenceOfElementLocated;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import core.utils.WaitUtils;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -74,19 +75,16 @@ public class SteamTests extends BaseTest {
 //            }
 //        }
 
-        new MainPage()
+        List<Long> reducePriceList = new MainPage()
             .search(FALLOUT)
-            .sortByReducePrice();
+            .sortByReducePrice()
+            .getPriceList();
 
-        WaitUtils.getExplicitWait().until(ExpectedConditions.visibilityOfElementLocated(
-            By.xpath("(//*[contains(text(),'убыванию цены')])[1]")));
+        List<Long> expectedResultList = reducePriceList.stream()
+            .sorted(Comparator.reverseOrder())
+            .collect(Collectors.toList());
 
-        List<WebElement> elementsSort =
-            WaitUtils.getExplicitWait().until(ExpectedConditions.presenceOfAllElementsLocatedBy(
-                By.xpath("//*[contains(@class,'discount_block')]")));
-
-        for (int i = 0; i < elementsSort.size(); i++) {
-            System.out.println(elementsSort.get(i).getAttribute("data-price-final"));
-        }
+        assertEquals("Сортировка выполнена некорректно! Цены идут не по убыванию.",
+            expectedResultList, reducePriceList);
     }
 }
