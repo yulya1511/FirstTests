@@ -6,6 +6,8 @@ import static core.utils.WaitUtils.waitUntilPresenceOfElementLocated;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SearchPage extends BasePage {
 
@@ -34,5 +36,10 @@ public class SearchPage extends BasePage {
             .map(element -> element.getAttribute("data-price-final"))
             .map(Long::parseLong)
             .collect(Collectors.toList());
+    }
+
+    public List<WebElement> expectedTitles(){
+       List<WebElement> titles = waitUntilPresenceOfAllElementsLocatedBy(By.xpath("//*[@class='title']"));
+       return titles;
     }
 }

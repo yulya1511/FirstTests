@@ -15,38 +15,64 @@ import pages.MainPage;
 public class SteamTests extends BaseTest {
 
     private static final String FALLOUT = "Fallout";
+    private static final String MAXPAYNE = "Max Payne";
 
+    /*Pre-Conditions:
+Открыть главную сраницу Steam https://store.steampowered.com/
+Шаги:
+1) Ввести в поиск "Max Payne" / В поле поиска введно "Max Payne"
+2) Нажать на кнопку "Поиск" / Открыта страница с выборкой игр по названию
+Ожидаемый результат:
+- В выборке не менее 5 тайтлов.
+- В выборе отсутствует тайтл с названием "Max Payne"
+    */
     @Test
     public void searchTest() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@name='term']")))
-            .sendKeys("Max Payne");
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='store_search_link']/img"))).click();
-        int i = 0;
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@name='term']")))
+//            .sendKeys("Max Payne");
+//        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='store_search_link']/img"))).click();
+//        int i = 0;
+//
+//        List<WebElement> titles = wait
+//            .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class='title']")));
+//
+//        assertTrue("В коллекции не менее 5 элементов", titles.size() > 5);
+//        assertFalse("В выборке отсутствует тайтл с название 'Max Payne'", titles.contains("Max Payne"));
 
-        List<WebElement> titles = wait
-            .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class='title']")));
+        List<WebElement> test1 = new MainPage()
+                .searchTest1(MAXPAYNE)
+                .expectedTitles();
+        assertTrue("В коллекции не менее 5 элементов", test1.size() > 5);
+        assertTrue("В выборке отсутствует тайтл с название 'Max Payne'", !test1.contains("Max Payne"));
 
-        assertTrue("В коллекции менее 5 элементов", titles.size() > 5);
-        assertFalse("В выборке отсутствует тайтл с название 'Max Payne'", titles.contains("Max Payne"));
     }
 
+    /*
+   Pre-Conditions:
+Открыть главную сраницу Steam https://store.steampowered.com/
+Шаги:
+1) Нажать на кнопку "Информация" в хэдере / Открыта страница с информацией
+Ожидаемый результат:
+- Кнопка "Загрузить Steam" отображается
+- Кнопка "Загрузить Steam" кликабельна
+     */
+    //div[@class='about_subtitle']
     @Test
     public void checkPage() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Информация')]")))
-            .click();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Информация')]")))
+//            .click();
+//
+//        WebElement button1 = wait
+//            .until(ExpectedConditions
+//                .visibilityOfElementLocated
+//                    (By.xpath("//div[@class='about_install mac ']//a[contains(text(), 'Загрузить Steam')][1]")));
+//
+//        assertTrue("Кнопка 'Загрузить Steam' отображается", button1.isEnabled());
 
-        WebElement button1 = wait
-            .until(ExpectedConditions
-                .visibilityOfElementLocated
-                    (By.xpath("//div[@class='about_install mac ']//a[contains(text(), 'Загрузить Steam')][1]")));
 
-        assertTrue("Кнопка 'Загрузить Steam' отображается", button1.isEnabled());
 
-        if (button1.isEnabled()) {
-            button1.click();
-        } else {
-            System.out.println("Кнопка 'Загрузить Steam' НЕкликабельна");
-        }
+        new MainPage().searchInfo().checkButton();
+
     }
 
     //    Ввести в поиск "Fallout" / В поле поиска введно "Fallout"
@@ -58,15 +84,12 @@ public class SteamTests extends BaseTest {
     public void sortOfTitles() {
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='store_nav_search_term']")))
 //            .sendKeys("Fallout", Keys.ENTER);
-//
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='sort_by_trigger']")))
 //            .click();
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(), 'убыванию цены')]")))
 //            .click();
-//
 //        List<WebElement> elementsSort =
 //            wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@id='search_results']")));
-//
 //        for (double i = 0; i < elementsSort.size(); i++) {
 //            if (i > elementsSort.size() - 1) {
 //                System.out.println("Цены расположены по убыванию");
