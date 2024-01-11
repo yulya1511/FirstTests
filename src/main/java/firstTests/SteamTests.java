@@ -7,9 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.MainPage;
 
 public class SteamTests extends BaseTest {
@@ -39,11 +37,12 @@ public class SteamTests extends BaseTest {
 //        assertTrue("В коллекции не менее 5 элементов", titles.size() > 5);
 //        assertFalse("В выборке отсутствует тайтл с название 'Max Payne'", titles.contains("Max Payne"));
 
-        List<WebElement> test1 = new MainPage()
-                .searchTest1(MAXPAYNE)
-                .expectedTitles();
-        assertTrue("В коллекции не менее 5 элементов", test1.size() > 5);
-        assertTrue("В выборке отсутствует тайтл с название 'Max Payne'", !test1.contains("Max Payne"));
+        List<String> gameTitles = new MainPage()
+            .search(MAXPAYNE)
+            .expectedTitlesAsList();
+
+        assertTrue("В коллекции не менее 5 элементов", gameTitles.size() > 5);
+        assertFalse("В выборке присутствует тайтл с название 'Max Payne'", gameTitles.contains("Max Payne"));
 
     }
 
@@ -69,10 +68,12 @@ public class SteamTests extends BaseTest {
 //
 //        assertTrue("Кнопка 'Загрузить Steam' отображается", button1.isEnabled());
 
+        WebElement button = new MainPage()
+            .searchInfo()
+            .getLoadSteamButtonElement();
 
-
-        new MainPage().searchInfo().checkButton();
-
+        assertTrue("Кнопка 'Загрузить Steam' отображается", button.isDisplayed());
+        assertTrue("Кнопка 'Загрузить Steam' отображается", button.isEnabled());
     }
 
     //    Ввести в поиск "Fallout" / В поле поиска введно "Fallout"

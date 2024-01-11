@@ -6,13 +6,8 @@ import static core.utils.WaitUtils.waitUntilPresenceOfElementLocated;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SearchPage extends BasePage {
-
-    private static final By ROOT_ELEMENT =
-        By.xpath("//*[contains(text(),'Результатов по вашему запросу')]");
 
     private static final By SORT_BY_BUTTON = By.xpath("//a[@id='sort_by_trigger']");
 
@@ -21,7 +16,7 @@ public class SearchPage extends BasePage {
     private static final By PRICE_LABEL = By.xpath("//*[contains(@class,'discount_block')]");
 
     public SearchPage() {
-        super(ROOT_ELEMENT);
+        super(By.xpath("//*[contains(text(),'Результатов по вашему запросу')]"));
     }
 
     public SearchPage sortByReducePrice() {
@@ -38,8 +33,10 @@ public class SearchPage extends BasePage {
             .collect(Collectors.toList());
     }
 
-    public List<WebElement> expectedTitles(){
-       List<WebElement> titles = waitUntilPresenceOfAllElementsLocatedBy(By.xpath("//*[@class='title']"));
-       return titles;
+    public List<String> expectedTitlesAsList() {
+        return waitUntilPresenceOfAllElementsLocatedBy(
+            By.xpath("//*[contains(@class,'search_results')]/descendant::*[@class='title']")).stream()
+            .map(element -> element.getText())
+            .collect(Collectors.toList());
     }
 }

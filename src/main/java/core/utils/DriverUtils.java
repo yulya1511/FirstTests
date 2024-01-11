@@ -8,11 +8,11 @@ public class DriverUtils {
         getDriver().navigate().refresh();
     }
 
-    public void openMainPage() {
-         getDriver().get("https://store.steampowered.com/");
+    public static void open(String url) {
+         getDriver().get(url);
     }
 
-    public void openPageMax() {
+    public static void openPageMax() {
         getDriver().manage().window().maximize();
     }
 }
